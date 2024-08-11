@@ -21,7 +21,9 @@ mixin _$RoomModel {
   String get roomNumber => throw _privateConstructorUsedError;
   List<ChildAgeModel> get childAges => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RoomModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RoomModelCopyWith<RoomModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +50,8 @@ class _$RoomModelCopyWithImpl<$Res, $Val extends RoomModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RoomModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,6 +104,8 @@ class __$$RoomModelImplCopyWithImpl<$Res>
       _$RoomModelImpl _value, $Res Function(_$RoomModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RoomModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,7 +186,9 @@ class _$RoomModelImpl implements _RoomModel {
   int get hashCode => Object.hash(runtimeType, adults, children, roomNumber,
       const DeepCollectionEquality().hash(_childAges));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RoomModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RoomModelImplCopyWith<_$RoomModelImpl> get copyWith =>
@@ -202,8 +210,11 @@ abstract class _RoomModel implements RoomModel {
   String get roomNumber;
   @override
   List<ChildAgeModel> get childAges;
+
+  /// Create a copy of RoomModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RoomModelImplCopyWith<_$RoomModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

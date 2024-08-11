@@ -39,7 +39,7 @@ class AuthPage extends ConsumerWidget {
                     hasBorder: true,
                     hasBorderRadius: true,
                     height: 55,
-                    onTap: () => context.push(homeRoute),
+                    onTap: () => context.push(gameRoute),
                   ),
                 ),
                 const SizedBox(height: 16),

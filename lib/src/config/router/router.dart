@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rockie/src/core/constants/routes.dart';
 import 'package:rockie/src/presentation/auth/page/auth_page.dart';
-import 'package:rockie/src/presentation/home/page/home_page.dart';
+import 'package:rockie/src/presentation/game/page/game_page.dart';
 import 'package:rockie/src/presentation/join_server/page/join_server_page.dart';
 import 'package:rockie/src/presentation/splash/page/splash_page.dart';
 
@@ -28,10 +28,10 @@ class AppRouter {
         pageBuilder: (state) => const JoinServerPage(),
       ),
       _route(
-        name: homeRoute,
-        path: homeRoute,
+        name: gameRoute,
+        path: gameRoute,
         duration: Durations.short1,
-        pageBuilder: (state) => const HomePage(),
+        pageBuilder: (state) => const GamePage(),
       ),
       _route(
         name: authRoute,

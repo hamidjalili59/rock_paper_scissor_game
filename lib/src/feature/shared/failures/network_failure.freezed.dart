@@ -78,6 +78,9 @@ class _$NetworkFailureCopyWithImpl<$Res, $Val extends NetworkFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of NetworkFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -94,6 +97,9 @@ class __$$NoInternetConnectionImplCopyWithImpl<$Res>
   __$$NoInternetConnectionImplCopyWithImpl(_$NoInternetConnectionImpl _value,
       $Res Function(_$NoInternetConnectionImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of NetworkFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -203,6 +209,9 @@ class __$$RequestTimeoutImplCopyWithImpl<$Res>
   __$$RequestTimeoutImplCopyWithImpl(
       _$RequestTimeoutImpl _value, $Res Function(_$RequestTimeoutImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of NetworkFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -314,6 +323,8 @@ class __$$InvalidUrlImplCopyWithImpl<$Res>
       _$InvalidUrlImpl _value, $Res Function(_$InvalidUrlImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NetworkFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,7 +364,9 @@ class _$InvalidUrlImpl implements _InvalidUrl {
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NetworkFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidUrlImplCopyWith<_$InvalidUrlImpl> get copyWith =>
@@ -432,7 +445,10 @@ abstract class _InvalidUrl implements NetworkFailure {
   const factory _InvalidUrl({final String url}) = _$InvalidUrlImpl;
 
   String get url;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NetworkFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidUrlImplCopyWith<_$InvalidUrlImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

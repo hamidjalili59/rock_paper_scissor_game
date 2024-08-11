@@ -78,6 +78,9 @@ class _$DatabaseFailureCopyWithImpl<$Res, $Val extends DatabaseFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DatabaseFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -94,6 +97,9 @@ class __$$UnableToConnectImplCopyWithImpl<$Res>
   __$$UnableToConnectImplCopyWithImpl(
       _$UnableToConnectImpl _value, $Res Function(_$UnableToConnectImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DatabaseFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -205,6 +211,8 @@ class __$$InvalidQueryImplCopyWithImpl<$Res>
       _$InvalidQueryImpl _value, $Res Function(_$InvalidQueryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DatabaseFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,7 +252,9 @@ class _$InvalidQueryImpl implements _InvalidQuery {
   @override
   int get hashCode => Object.hash(runtimeType, query);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DatabaseFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidQueryImplCopyWith<_$InvalidQueryImpl> get copyWith =>
@@ -323,7 +333,10 @@ abstract class _InvalidQuery implements DatabaseFailure {
   const factory _InvalidQuery({final String query}) = _$InvalidQueryImpl;
 
   String get query;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DatabaseFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidQueryImplCopyWith<_$InvalidQueryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -342,6 +355,9 @@ class __$$NoDataFoundImplCopyWithImpl<$Res>
   __$$NoDataFoundImplCopyWithImpl(
       _$NoDataFoundImpl _value, $Res Function(_$NoDataFoundImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DatabaseFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

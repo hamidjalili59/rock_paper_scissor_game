@@ -87,6 +87,9 @@ class _$ServerFailureCopyWithImpl<$Res, $Val extends ServerFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,8 @@ class __$$UnexpectedStatusCodeImplCopyWithImpl<$Res>
       $Res Function(_$UnexpectedStatusCodeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,7 +150,9 @@ class _$UnexpectedStatusCodeImpl implements _UnexpectedStatusCode {
   @override
   int get hashCode => Object.hash(runtimeType, statusCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnexpectedStatusCodeImplCopyWith<_$UnexpectedStatusCodeImpl>
@@ -236,7 +243,10 @@ abstract class _UnexpectedStatusCode implements ServerFailure {
       _$UnexpectedStatusCodeImpl;
 
   int get statusCode;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnexpectedStatusCodeImplCopyWith<_$UnexpectedStatusCodeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -261,6 +271,8 @@ class __$$UnexpectedStatusCodeWithMessageImplCopyWithImpl<$Res>
       $Res Function(_$UnexpectedStatusCodeWithMessageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,7 +312,9 @@ class _$UnexpectedStatusCodeWithMessageImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnexpectedStatusCodeWithMessageImplCopyWith<
@@ -391,7 +405,10 @@ abstract class _UnexpectedStatusCodeWithMessage implements ServerFailure {
       _$UnexpectedStatusCodeWithMessageImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnexpectedStatusCodeWithMessageImplCopyWith<
           _$UnexpectedStatusCodeWithMessageImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -414,6 +431,8 @@ class __$$InvalidJsonImplCopyWithImpl<$Res>
       _$InvalidJsonImpl _value, $Res Function(_$InvalidJsonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -452,7 +471,9 @@ class _$InvalidJsonImpl implements _InvalidJson {
   @override
   int get hashCode => Object.hash(runtimeType, json);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvalidJsonImplCopyWith<_$InvalidJsonImpl> get copyWith =>
@@ -540,7 +561,10 @@ abstract class _InvalidJson implements ServerFailure {
   const factory _InvalidJson(final String json) = _$InvalidJsonImpl;
 
   String get json;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvalidJsonImplCopyWith<_$InvalidJsonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -559,6 +583,9 @@ class __$$ServerErrorImplCopyWithImpl<$Res>
   __$$ServerErrorImplCopyWithImpl(
       _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ServerFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

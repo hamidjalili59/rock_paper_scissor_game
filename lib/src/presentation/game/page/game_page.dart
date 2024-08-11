@@ -1,15 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:rockie/src/config/themes/app_themes.dart';
 import 'package:rockie/src/core/gen/assets.gen.dart';
 import 'package:rockie/src/core/core.dart';
 
-class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
+class GamePage extends ConsumerStatefulWidget {
+  const GamePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConsumerStatefulWidget> createState() => _GamePageState();
+}
+
+class _GamePageState extends ConsumerState<GamePage> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
@@ -62,14 +70,11 @@ class HomePage extends ConsumerWidget {
                       duration: Durations.extralong4),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topCenter,
             child: Padding(
-              padding: const EdgeInsets.only(top: 36),
-              child: Text(
-                '00:23',
-                style: kHeading2TextStyle.copyWith(fontWeight: FontWeight.bold),
-              ),
+              padding: EdgeInsets.only(top: 36),
+              child: GameTimeCounter(),
             ),
           ),
           Positioned(
@@ -118,5 +123,54 @@ class HomePage extends ConsumerWidget {
         ],
       ),
     );
+  }
+}
+
+class GameTimeCounter extends ConsumerStatefulWidget {
+  const GameTimeCounter({super.key});
+
+  @override
+  ConsumerState<ConsumerStatefulWidget> createState() =>
+      _GameTimeCounterState();
+}
+
+class _GameTimeCounterState extends ConsumerState<GameTimeCounter> {
+  late Timer? _timer;
+  DateTime time = DateTime.now().add(const Duration(seconds: 30));
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer(
+      Durations.extralong4,
+      _timerPeriodMethod,
+    );
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      DateFormat('mm:ss').format(time),
+      style: kHeading2TextStyle.copyWith(fontWeight: FontWeight.bold),
+    );
+  }
+
+  Future<void> _timerPeriodMethod() async {
+    if (time.second > 0) {
+      setState(() {
+        time = time.subtract(const Duration(seconds: 1));
+      });
+    } else {
+      _timer?.cancel();
+      setState(() {
+        _timer = null;
+      });
+    }
   }
 }

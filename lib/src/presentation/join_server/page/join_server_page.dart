@@ -42,7 +42,7 @@ class _JoinServerPageState extends ConsumerState<JoinServerPage> {
               child: ButtonComponent(
                 title: 'Accept',
                 height: 50,
-                onTap: () => context.push(homeRoute),
+                onTap: () => context.push(gameRoute),
               ),
             ),
           ],
