@@ -1,0 +1,12 @@
+const double kBorderRadius = 8;
+const double kPadding = 16;
+const double kAppbarHeight = 60;
+const double kBottomSheetBorderRadius = 20;
+String tempMinimumPrice = '0';
+const String kFont = 'IRANSans';
+const String kQuickSandFont = 'QuickSand';
+const Duration kLongAnimationDuration = Duration(milliseconds: 1300);
+const Duration kShortAnimationDuration = Duration(milliseconds: 800);
+const String kAppVersion = '4.0.0';
+const String kLoremIpsum = 'لورم ایپسوم ، متن ساختگی است';
+const String baseUrl = 'https://api.touriper.com/';
