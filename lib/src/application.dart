@@ -1,11 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:rockie/src/feature/auth/domain/models/tokens_model.dart';
 import 'package:toastification/toastification.dart';
 import 'package:rockie/src/config/l10n/arb/app_localizations.dart';
-import 'package:rockie/src/core/core.dart';
 import 'package:rockie/src/injection/main_modules_providers.dart';
 
 class Application extends ConsumerStatefulWidget {
