@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Workflow for building and deploying Flutter web app to GitHub Pages
+name: Deploy Flutter Web to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -15,36 +15,48 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Clone repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: master
-      - run: flutter clean
-      - run: flutter pub get
-      - run: flutter test
-      - run: flutter build web --release --pwa-strategy=none
+
+      - name: Flutter clean
+        run: flutter clean
+
+      - name: Get Flutter dependencies
+        run: flutter pub get
+
+      - name: Run Flutter tests
+        run: flutter test
+
+      - name: Build Flutter web
+        run: flutter build web --release --pwa-strategy=none
+
+      - name: Modify index.html
+        run: |
+          sed -i '/<base href="\/">/d' ./build/web/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: './build/web/'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
